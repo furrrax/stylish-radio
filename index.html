@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calc</title>
+    <link rel='stylesheet prefetch' href='./css/reset.css'>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="calc">
+            <form class="calc__form">
+                <h1 class="calc__title">Калькулятор стоимости проекта</h1>
+
+                <div class="calc__row calc__row-1">
+                    <div class="calc__row-item">
+                        <div class="calc__row__title">
+                            <h2 class="calc__row__title-text">Дизайн Интерьера:</h2>
+                        </div>
+
+                        <ul class="select">
+                            <li>
+                                <input class="select__close" type="radio" name="interior" id="interior-close"/>
+                                <span class="select__label select__label-placeholder">Выберите тип строения</span>
+                            </li>
+                            
+                            <li class="select__items">
+                                <input class="select__expand" type="radio" name="interior" id="interior-opener"/>
+                                <label class="select__closeLabel" for="interior-close"></label>
+                                
+                                <ul class="select__options">
+                                    <li class="select__option">
+                                        <input class="select__input" type="radio" name="interior" id="interior-1"/>
+                                        <label class="select__label select__label__item" for="interior-1">Дом</label>
+                                    </li>
+                    
+                                    <li class="select__option">
+                                        <input class="select__input" type="radio" name="interior" id="interior-2"/>
+                                        <label class="select__label select__label__item" for="interior-2">Квартира</label>
+                                    </li>
+                    
+                                    <li class="select__option">
+                                        <input class="select__input" type="radio" name="interior" id="interior-3"/>
+                                        <label class="select__label select__label__item" for="interior-3">Офис</label>
+                                    </li>
+                    
+                                    <li class="select__option">
+                                        <input class="select__input" type="radio" name="interior" id="interior-4"/>
+                                        <label class="select__label select__label__item" for="interior-4">Ресторан</label>
+                                    </li>
+                                </ul>
+                                
+                                <label class="select__expandLabel" for="interior-opener"></label>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="calc__row-item calc__row-item-terrain">
+                        <div class="calc__row-terrain">
+                            <div class="calc__row__title">
+                                <h2 class="calc__row__title-text">Площадь территории:</h2>
+                            </div>
+                            <div class="calc__row__title-input" id="terrain__result"></div>
+                            <ul class="select select__terrain">
+                                <li>
+                                    <input class="select__close" type="radio" name="terrain" id="terrain-close"/>
+                                    <span class="select__label select__label-placeholder">КВ. М</span>
+                                </li>
+                                <li class="select__items">
+                                    <input class="select__expand" type="radio" name="terrain" id="terrain-opener"/>
+                                    <label class="select__closeLabel" for="terrain-close"></label>
+                                    
+                                    <ul class="select__options">
+                                        <li class="select__option">
+                                            <input class="select__input" type="radio" name="terrain" id="terrain-1"/>
+                                            <label class="select__label select__label__item" for="terrain-1">КВ. СМ</label>
+                                        </li>
+                        
+                                        <li class="select__option">
+                                            <input class="select__input" type="radio" name="terrain" id="terrain-2"/>
+                                            <label class="select__label select__label__item" for="terrain-2">КВ. ДМ</label>
+                                        </li>
+                        
+                                        <li class="select__option">
+                                            <input class="select__input" type="radio" name="terrain" id="terrain-3"/>
+                                            <label class="select__label select__label__item" for="terrain-3">КМ</label>
+                                        </li>
+                                    </ul>
+                                    
+                                    <label class="select__expandLabel" for="terrain-opener"></label>
+                                </li>
+                            </ul>
+                        </div>
+                        <input class="calc__line" id="terrain__input" oninput="range()" type="range" min="0" max="1000" step="1">
+                    </div>
+                </div>
+
+                <div class="calc__row calc__row-2">
+                    <div class="calc__row-item">
+                        <div class="calc__row__title">
+                            <h2 class="calc__row__title-text">Стиль Интерьера:</h2>
+                        </div>
+
+                        <ul class="select">
+                            <li>
+                                <input class="select__close" type="radio" name="style" id="style-close"/>
+                                <span class="select__label select__label-placeholder">Выберите стиль</span>
+                            </li>
+                            
+                            <li class="select__items">
+                                <input class="select__expand" type="radio" name="style" id="style-opener"/>
+                                <label class="select__closeLabel" for="style-close"></label>
+                                
+                                <ul class="select__options">
+                                    <li class="select__option">
+                                        <input class="select__input" type="radio" name="style" id="style-1"/>
+                                        <label class="select__label select__label__item" for="style-1">Дом</label>
+                                    </li>
+                    
+                                    <li class="select__option">
+                                        <input class="select__input" type="radio" name="style" id="style-2"/>
+                                        <label class="select__label select__label__item" for="style-2">Квартира</label>
+                                    </li>
+                    
+                                    <li class="select__option">
+                                        <input class="select__input" type="radio" name="style" id="style-3"/>
+                                        <label class="select__label select__label__item" for="style-3">Офис</label>
+                                    </li>
+                    
+                                    <li class="select__option">
+                                        <input class="select__input" type="radio" name="style" id="style-4"/>
+                                        <label class="select__label select__label__item" for="style-4">Ресторан</label>
+                                    </li>
+                                </ul>
+                                
+                                <label class="select__expandLabel" for="style-opener"></label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="calc__row-item">
+                        <div class="calc__row__title">
+                            <h2 class="calc__row__title-text">Состав проекта:</h2>
+                        </div>
+
+                        <ul class="select">
+                            <li>
+                                <input class="select__close" type="radio" name="structure" id="structure-close"/>
+                                <span class="select__label select__label-placeholder">Выберите пакет</span>
+                            </li>
+                            
+                            <li class="select__items">
+                                <input class="select__expand" type="radio" name="structure" id="structure-opener"/>
+                                <label class="select__closeLabel" for="structure-close"></label>
+                                
+                                <ul class="select__options">
+                                    <li class="select__option">
+                                        <input class="select__input" type="radio" name="structure" id="structure-1"/>
+                                        <label class="select__label select__label__item" for="structure-1">Дом</label>
+                                    </li>
+                    
+                                    <li class="select__option">
+                                        <input class="select__input" type="radio" name="structure" id="structure-2"/>
+                                        <label class="select__label select__label__item" for="structure-2">Квартира</label>
+                                    </li>
+                    
+                                    <li class="select__option">
+                                        <input class="select__input" type="radio" name="structure" id="structure-3"/>
+                                        <label class="select__label select__label__item" for="structure-3">Офис</label>
+                                    </li>
+                    
+                                    <li class="select__option">
+                                        <input class="select__input" type="radio" name="structure" id="structure-4"/>
+                                        <label class="select__label select__label__item" for="structure-4">Ресторан</label>
+                                    </li>
+                                </ul>
+                                
+                                <label class="select__expandLabel" for="structure-opener"></label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="calc__row calc__row-3">
+                    <div class="calc__row-item">
+                        <div class="calc__row__title">
+                            <h2 class="calc__row__title-text">Начало строительно-ремонтных работ:</h2>
+                        </div>
+
+                        <ul class="select">
+                            <li>
+                                <input class="select__close" type="radio" name="work" id="work-close"/>
+                                <span class="select__label select__label-placeholder">Когда вы готовы начать работы?</span>
+                            </li>
+                            
+                            <li class="select__items">
+                                <input class="select__expand" type="radio" name="work" id="work-opener"/>
+                                <label class="select__closeLabel" for="work-close"></label>
+                                
+                                <ul class="select__options">
+                                    <li class="select__option">
+                                        <input class="select__input" type="radio" name="work" id="work-1"/>
+                                        <label class="select__label select__label__item" for="work-1">Дом</label>
+                                    </li>
+                    
+                                    <li class="select__option">
+                                        <input class="select__input" type="radio" name="work" id="work-2"/>
+                                        <label class="select__label select__label__item" for="work-2">Квартира</label>
+                                    </li>
+                    
+                                    <li class="select__option">
+                                        <input class="select__input" type="radio" name="work" id="work-3"/>
+                                        <label class="select__label select__label__item" for="work-3">Офис</label>
+                                    </li>
+                    
+                                    <li class="select__option">
+                                        <input class="select__input" type="radio" name="work" id="work-4"/>
+                                        <label class="select__label select__label__item" for="work-4">Ресторан</label>
+                                    </li>
+                                </ul>
+                                
+                                <label class="select__expandLabel" for="work-opener"></label>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="calc__row-item">
+                        <div class="calc__row__title">
+                            <h2 class="calc__row__title-text">Участие в проекте:</h2>
+                        </div>
+
+                        <ul class="select">
+                            <li>
+                                <input class="select__close" type="radio" name="participation" id="participation-close"/>
+                                <span class="select__label select__label-placeholder">Насколько вы готовы участвовать в проекте?</span>
+                            </li>
+                            
+                            <li class="select__items">
+                                <input class="select__expand" type="radio" name="participation" id="participation-opener"/>
+                                <label class="select__closeLabel" for="participation-close"></label>
+                                
+                                <ul class="select__options">
+                                    <li class="select__option">
+                                        <input class="select__input" type="radio" name="participation" id="participation-1"/>
+                                        <label class="select__label select__label__item" for="participation-1">Дом</label>
+                                    </li>
+                    
+                                    <li class="select__option">
+                                        <input class="select__input" type="radio" name="participation" id="participation-2"/>
+                                        <label class="select__label select__label__item" for="participation-2">Квартира</label>
+                                    </li>
+                    
+                                    <li class="select__option">
+                                        <input class="select__input" type="radio" name="participation" id="participation-3"/>
+                                        <label class="select__label select__label__item" for="participation-3">Офис</label>
+                                    </li>
+                    
+                                    <li class="select__option">
+                                        <input class="select__input" type="radio" name="participation" id="participation-4"/>
+                                        <label class="select__label select__label__item" for="participation-4">Ресторан</label>
+                                    </li>
+                                </ul>
+                                
+                                <label class="select__expandLabel" for="participation-opener"></label>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="calc__row calc__row-btn">
+                    <button type="submit" class="calc__button">
+                        <p class="calc__button-text">Узнать цену</p>
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
+</html>
